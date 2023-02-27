@@ -1,0 +1,49 @@
+###############################################################################################################################
+#This is a reusable github action by Strata to call tfsec within your build github action workflow file
+# 
+# Below is the syntax to call this:
+# jobs:
+#    tfsec-code-analysis:
+#       name: Tfsec Terraform code analysis 
+#       uses: strataconsulting/strata-infrastructure/.github/workflows/strata-central-tfsec-workflow.yml@github-tf-code-scan
+###############################################################################################################################
+name: Strata Analyse Terraform code with tfsec
+
+on:
+  workflow_call:
+    inputs:
+      cli_config_credentials_token:
+        description: "The Terraform Cloud API token."
+        type: string
+        required: false
+
+      working_directory:
+        description: "The working directory of the Terraform project."
+        type: string
+        default: .
+        required: false
+
+      tfsec_token:
+        description: "The GitHub API token."
+        type: string
+        required: false
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v3
+
+      - name: Run tfsec
+        uses: aquasecurity/tfsec-sarif-action@9a83b5c3524f825c020e356335855741fd02745f
+        with:
+          sarif_file: tfsec.sarif
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: tfsec.sarif
+        
