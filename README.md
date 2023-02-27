@@ -1,11 +1,7 @@
-# ![Strata Github Advanced Security actions ]
+# [Strata Github Advanced Security actions ]
 
 
 > ### This is a central repo to store all the templatized Re-usuable Github Actions for Code Scanning
-
-
-
-# *NEW* GraphQL Support  
 
 
 # How it works
