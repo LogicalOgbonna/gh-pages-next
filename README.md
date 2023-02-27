@@ -17,7 +17,7 @@ jobs:
 
   call-codeQL-analysis:
     name: CodeQL analysis 
-    uses: strataconsulting/github-actions/.github/workflows/security/actions-codeql/analyse-code.yml@main
+    uses: strataconsulting/github-actions/security/actions-codeql/analyse-code.yml@main
     with:
       languages: "[ 'java', 'javascript' ]"
 ```
@@ -27,18 +27,17 @@ jobs:
 
 ```
 github-actions
-├── .github
-│   └── workflows
-│       └── security
-│           ├── actions-codeql
-│           │   └── analyse-code.yml            #CodeQL action to scan your code
-│           └── actions-terraform
-│               └── strata-scan-terraform.yml   #Tfsec action to scan your terraform code
-└── README.md
+├── README.md
+└── security
+    ├── actions-codeql
+    │   └── analyse-code.yml             #CodeQL action to scan your code
+    └── actions-terraform
+        └── strata-scan-terraform.yml    #Tfsec action to scan your terraform code
 
 ```
 
 # References
 
 ![Stratafied GitHub Advanced Security](https://strataconsulting.atlassian.net/l/cp/sNt3DDM9)
+
 ![Stratafied GHAS - Best practices](https://strataconsulting.atlassian.net/l/cp/1qcDTPv1)
