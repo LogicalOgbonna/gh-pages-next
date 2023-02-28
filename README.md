@@ -30,7 +30,7 @@ jobs:
 
   call-codeQL-analysis:
     name: CodeQL analysis 
-    uses: strataconsulting/github-actions/.github/workflows/strata-analyse-code.yml@be81cb0e64c976e94b88d03a70f592b63ee991f7
+    uses: strataconsulting/github-actions/.github/workflows/analyse-code.yml@be81cb0e64c976e94b88d03a70f592b63ee991f7
     with:
       languages: "[ 'java', 'javascript' ]"      #languages in the current repo
 ```
@@ -42,7 +42,7 @@ jobs:
 
   tfsec-code-analysis:
     name: Tfsec Terraform code analysis  
-    uses: strataconsulting/github-actions/.github/workflows/strata-scan-terraform.yml@be81cb0e64c976e94b88d03a70f592b63ee991f7
+    uses: strataconsulting/github-actions/.github/workflows/scan-terraform.yml@be81cb0e64c976e94b88d03a70f592b63ee991f7
 ```
 
 ## Reference
