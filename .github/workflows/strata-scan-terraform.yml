@@ -1,11 +1,6 @@
 ###############################################################################################################################
 #This is a reusable github action by Strata to call tfsec within your build github action workflow file
 # 
-# Below is the syntax to call this:
-# jobs:
-#    tfsec-code-analysis:
-#       name: Tfsec Terraform code analysis 
-#       uses: strataconsulting/strata-infrastructure/.github/workflows/strata-central-tfsec-workflow.yml@github-tf-code-scan
 ###############################################################################################################################
 name: Strata Analyse Terraform code with tfsec
 
