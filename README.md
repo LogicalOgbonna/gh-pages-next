@@ -10,8 +10,8 @@ Strata's centralized repository for internally hosted/managed [GitHub Actions](h
 github-actions
     ├── .github
     │   └── workflows
-    │       ├── strata-analyse-code.yml    #CodeQL action to scan your code
-    │       └── strata-scan-terraform.yml  #Tfsec action to scan your terraform code
+    │       ├── analyse-code.yml    #CodeQL action to scan your code
+    │       └── scan-terraform.yml  #Tfsec action to scan your terraform code
     └── README.md
 
 ```
