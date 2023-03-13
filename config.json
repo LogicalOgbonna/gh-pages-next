@@ -1,0 +1,7 @@
+{
+  "age": [
+    { "title": "30 days", "color": "red" },
+    { "title": "7 days", "color": "blue" },
+    { "title": "3 days", "color": "green" }
+  ]
+}
