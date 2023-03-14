@@ -67,7 +67,7 @@ export const getIssues = async () => {
       }
       if (!printed) {
         if (agesData[`Above ${maxAge}`]) {
-          agesData[`Above ${maxAge}`].push({
+          agesData[`Above ${maxAge} days`].push({
             id,
             updated_at,
             created_at,
@@ -79,7 +79,7 @@ export const getIssues = async () => {
             html_url,
           });
         } else {
-          agesData[`Above ${maxAge}`] = [
+          agesData[`Above ${maxAge} days`] = [
             {
               id,
               updated_at,
