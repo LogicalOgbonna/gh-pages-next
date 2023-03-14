@@ -40,8 +40,8 @@ export default function Home() {
                 Strata Security Dashboard
               </h1>
               <p className="text-sm text-gray-500">
-                View the real-time status of your system's security and easily
-                identify potential threats with our security dashboard's visual
+                View the real-time status of your system&apos;s security and easily
+                identify potential threats with our security dashboard&apos;s visual
                 representation of all security activity.
               </p>
             </div>
