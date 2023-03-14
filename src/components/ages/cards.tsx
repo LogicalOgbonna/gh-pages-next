@@ -15,7 +15,7 @@ const Cards = ({ loading, data, error, active }: ICard) => {
     return (
       <div
         key={index}
-        className={`w-full p-2 w-1/${
+        className={`w-full p-2 lg:w-1/${
             array.length > 3 ? "4" : array.length
           } md:w-1/${
             array.length > 3 ? "4" : array.length
